@@ -1,1 +1,1 @@
-@extends('title', 'Trains')
+
