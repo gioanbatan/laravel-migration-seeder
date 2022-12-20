@@ -14,7 +14,7 @@ class TrainController extends Controller
         // dd($actualDay->format('Y-m-d'));
         // $trains = Train::all();
 
-        $trains = Train::where('ora_partenza', '>=', $actualDay->format('Y-m-d'));
+        $trains = Train::where('ora_partenza', '>=', $actualDay->format('Y-m-d'))->get();
         // dd($trains, $actualDay);
         return view('trains.index', compact('trains', 'actualDay'));
     }
