@@ -18,4 +18,10 @@ class TrainController extends Controller
         // dd($trains, $actualDay);
         return view('trains.index', compact('trains', 'actualDay'));
     }
+
+    public function show($id)
+    {
+        $train = Train::find($id);
+        return view('trains.show', compact('train'));
+    }
 }
